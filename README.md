@@ -1,10 +1,41 @@
 # Gerenciando Instâncias EC2 na AWS
 
-## Descrição do Projeto
+![AWS](https://img.shields.io/badge/AWS-Cloud-orange)
+![EC2](https://img.shields.io/badge/Amazon-EC2-blue)
+![S3](https://img.shields.io/badge/Amazon-S3-red)
+![IAM](https://img.shields.io/badge/AWS-IAM-green)
+![DIO](https://img.shields.io/badge/DIO-Bootcamp-purple)
 
-Este repositório foi desenvolvido como parte do desafio prático do Bootcamp **GFT - Fundamentos de Cloud com AWS**, oferecido pela DIO.
+## Descrição
 
-O objetivo deste laboratório foi consolidar os conhecimentos adquiridos sobre computação em nuvem e os principais serviços da AWS, com foco na criação, configuração e gerenciamento de instâncias EC2.
+Este repositório foi desenvolvido como parte do desafio prático do Bootcamp **GFT - Fundamentos de Cloud com AWS**, promovido pela DIO.
+
+O objetivo deste laboratório foi consolidar os conhecimentos adquiridos sobre computação em nuvem e os principais serviços da AWS, com foco na criação, configuração e gerenciamento de instâncias EC2, além da aplicação de boas práticas de segurança, armazenamento e controle de custos.
+
+## Status do Projeto
+
+✅ Concluído
+
+📚 Bootcamp: GFT - Fundamentos de Cloud com AWS
+
+☁️ Plataforma: AWS
+
+🎓 Instituição: DIO
+
+---
+
+## 📑 Índice
+
+* [Objetivos de Aprendizagem](#objetivos-de-aprendizagem)
+* [Tecnologias e Serviços Utilizados](#tecnologias-e-serviços-utilizados)
+* [Serviços AWS Explorados](#serviços-aws-explorados)
+* [Conteúdo Estudado](#conteúdo-estudado)
+* [Aprendizados Obtidos](#aprendizados-obtidos)
+* [Insights Pessoais](#insights-pessoais)
+* [Evidências da Prática](#evidências-da-prática)
+* [Estrutura do Repositório](#estrutura-do-repositório)
+* [Conclusão](#conclusão)
+* [Referências](#referências)
 
 ---
 
@@ -13,18 +44,48 @@ O objetivo deste laboratório foi consolidar os conhecimentos adquiridos sobre c
 * Compreender os conceitos fundamentais da computação em nuvem.
 * Conhecer a infraestrutura global da AWS.
 * Configurar uma conta AWS de forma segura.
-* Aplicar boas práticas de controle de acesso e custos.
+* Aplicar boas práticas de gerenciamento de acesso.
+* Entender mecanismos de controle de custos.
 * Criar e gerenciar instâncias EC2.
-* Utilizar serviços de armazenamento como Amazon EBS e Amazon S3.
+* Utilizar os serviços Amazon EBS e Amazon S3.
 * Documentar experiências técnicas utilizando GitHub.
 
 ---
 
-## Introdução à AWS e ao Universo da Computação em Nuvem
+## Tecnologias e Serviços Utilizados
 
-A computação em nuvem permite o fornecimento de recursos de tecnologia sob demanda pela internet, eliminando a necessidade de grandes investimentos em infraestrutura física.
+* Amazon Web Services (AWS)
+* Amazon EC2
+* Amazon EBS
+* Amazon S3
+* AWS IAM
+* AWS Billing Dashboard
+* AWS Budgets
+* Git
+* GitHub
 
-Principais benefícios:
+---
+
+## Serviços AWS Explorados
+
+| Serviço           | Finalidade                                     |
+| ----------------- | ---------------------------------------------- |
+| EC2               | Criação e gerenciamento de servidores virtuais |
+| IAM               | Controle de acesso e permissões                |
+| EBS               | Armazenamento em blocos para instâncias        |
+| S3                | Armazenamento de objetos                       |
+| Billing Dashboard | Controle financeiro                            |
+| AWS Budgets       | Monitoramento e alertas de custos              |
+
+---
+
+## Conteúdo Estudado
+
+### Introdução à AWS e ao Universo da Computação em Nuvem
+
+A computação em nuvem permite disponibilizar recursos computacionais sob demanda através da internet, eliminando a necessidade de aquisição e manutenção de infraestrutura física própria.
+
+**Principais benefícios:**
 
 * Escalabilidade
 * Elasticidade
@@ -33,45 +94,41 @@ Principais benefícios:
 * Segurança
 * Pagamento conforme o uso
 
-A Amazon Web Services (AWS) é uma das maiores plataformas de computação em nuvem do mundo, oferecendo centenas de serviços para empresas e profissionais de tecnologia.
-
 ---
 
-## Fundamentos Essenciais da Infraestrutura AWS
+### Fundamentos Essenciais da Infraestrutura AWS
 
 A infraestrutura AWS é organizada em:
 
-### Regiões (Regions)
+#### Regiões (Regions)
 
-São áreas geográficas onde a AWS mantém seus datacenters.
+Locais físicos distribuídos globalmente onde a AWS hospeda seus serviços.
 
-Exemplo:
+Exemplos:
 
 * us-east-1 (Norte da Virgínia)
 * sa-east-1 (São Paulo)
 
-### Zonas de Disponibilidade (Availability Zones)
+#### Zonas de Disponibilidade (Availability Zones)
 
-Cada região possui uma ou mais zonas de disponibilidade independentes, garantindo alta disponibilidade e redundância.
+Datacenters independentes dentro de uma mesma região que garantem redundância e alta disponibilidade.
 
-### Edge Locations
+#### Edge Locations
 
-Utilizadas para acelerar a entrega de conteúdo através de serviços como CloudFront.
+Pontos de presença utilizados para acelerar a entrega de conteúdo através de serviços como CloudFront.
 
 ---
 
-## Configurando sua Conta AWS com Segurança e Eficiência
+### Configurando sua Conta AWS com Segurança e Eficiência
 
-Durante a configuração da conta AWS, foram abordadas práticas essenciais de segurança:
+Durante o laboratório foram aplicadas boas práticas de segurança:
 
-### Boas Práticas
-
-* Utilização de MFA (Autenticação Multifator)
+* Ativação do MFA (Autenticação Multifator)
 * Proteção da conta Root
 * Criação de usuários administrativos através do IAM
-* Uso do princípio do menor privilégio
+* Aplicação do princípio do menor privilégio
 
-### IAM (Identity and Access Management)
+#### IAM (Identity and Access Management)
 
 Serviço responsável pelo gerenciamento de:
 
@@ -82,37 +139,35 @@ Serviço responsável pelo gerenciamento de:
 
 ---
 
-## Primeiros Passos com Acesso Seguro e Controle de Custos
+### Primeiros Passos com Acesso Seguro e Controle de Custos
 
-Para evitar cobranças inesperadas, foram estudados mecanismos de controle financeiro.
-
-### Ferramentas Utilizadas
+Ferramentas utilizadas:
 
 * AWS Billing Dashboard
 * AWS Cost Explorer
 * AWS Budgets
 
-### Benefícios
+Benefícios:
 
 * Monitoramento de gastos
-* Definição de alertas
+* Alertas de consumo
 * Planejamento financeiro
 
 ---
 
-## Entendendo as Instâncias EC2 e a Otimização de Recursos AWS
+### Entendendo as Instâncias EC2 e a Otimização de Recursos AWS
 
-O Amazon EC2 (Elastic Compute Cloud) permite criar servidores virtuais na nuvem.
+O Amazon EC2 (Elastic Compute Cloud) permite criar servidores virtuais sob demanda.
 
-### Principais Componentes
+#### Componentes Principais
 
-* AMI (Amazon Machine Image)
-* Tipo de Instância
-* Chave de Acesso (Key Pair)
+* Amazon Machine Image (AMI)
+* Tipos de Instância
+* Key Pair
 * Security Groups
-* Rede (VPC)
+* VPC (Virtual Private Cloud)
 
-### Estados de uma Instância
+#### Estados da Instância
 
 * Pending
 * Running
@@ -120,92 +175,125 @@ O Amazon EC2 (Elastic Compute Cloud) permite criar servidores virtuais na nuvem.
 * Stopped
 * Terminated
 
-### Vantagens
-
-* Escalabilidade
-* Flexibilidade
-* Pagamento sob demanda
-* Implantação rápida
-
 ---
 
-## Armazenamento na Nuvem com Amazon EBS e S3
+### Armazenamento na Nuvem com Amazon EBS e S3
 
-### Amazon EBS (Elastic Block Store)
+#### Amazon EBS (Elastic Block Store)
 
 Serviço de armazenamento em blocos utilizado junto às instâncias EC2.
 
 Características:
 
-* Alta performance
 * Persistência dos dados
-* Possibilidade de snapshots
+* Alta performance
+* Snapshots para backup
 
-### Amazon S3 (Simple Storage Service)
+#### Amazon S3 (Simple Storage Service)
 
 Serviço de armazenamento de objetos utilizado para:
 
 * Backups
 * Arquivos
-* Sites estáticos
-* Compartilhamento de documentos
+* Documentos
+* Integração com outros serviços AWS
 
 Benefícios:
 
-* Alta durabilidade
+* Alta disponibilidade
 * Escalabilidade praticamente ilimitada
-* Integração com diversos serviços AWS
+* Durabilidade dos dados
 
 ---
 
-## Gerenciando Instâncias EC2 na AWS
+### Gerenciando Instâncias EC2 na AWS
 
-Durante o laboratório foram executadas atividades relacionadas ao gerenciamento de instâncias.
+Durante a prática foram executadas atividades como:
 
-### Atividades Realizadas
-
-* Criação de uma instância EC2
+* Criação de instâncias EC2
 * Configuração de Security Groups
-* Criação e utilização de Key Pair
-* Inicialização da instância
-* Parada da instância
-* Reinicialização da instância
-* Encerramento da instância
-
-### Conceitos Importantes
+* Criação de Key Pairs
+* Inicialização de instâncias
+* Parada de instâncias
+* Reinicialização de instâncias
+* Encerramento de instâncias
 
 #### Security Groups
 
-Funcionam como um firewall virtual, controlando o tráfego de entrada e saída das instâncias.
-
-#### Key Pair
-
-Utilizada para autenticação segura no acesso às instâncias Linux via SSH.
+Funcionam como um firewall virtual responsável pelo controle do tráfego de entrada e saída da instância.
 
 #### Monitoramento
 
-A AWS oferece monitoramento através do CloudWatch para acompanhamento de desempenho e utilização de recursos.
+A AWS disponibiliza integração com o CloudWatch para monitoramento dos recursos provisionados.
 
 ---
 
 ## Aprendizados Obtidos
 
-Durante este desafio, foi possível compreender de forma prática:
+Durante a realização deste laboratório foi possível compreender:
 
-* O funcionamento da infraestrutura AWS.
-* A importância da segurança em ambientes de nuvem.
+* O funcionamento da infraestrutura global da AWS.
+* A importância da segurança em ambientes cloud.
+* O uso do IAM para gerenciamento de usuários e permissões.
 * Como controlar custos utilizando ferramentas nativas da AWS.
-* O processo de criação e gerenciamento de servidores virtuais através do EC2.
-* As diferenças entre armazenamento em blocos (EBS) e armazenamento de objetos (S3).
-* A importância do gerenciamento eficiente de recursos em ambientes cloud.
+* O processo de criação e gerenciamento de instâncias EC2.
+* As diferenças entre EBS e S3.
+* Boas práticas para administração de ambientes em nuvem.
+
+---
+
+## Insights Pessoais
+
+Durante a realização deste desafio, alguns conceitos se destacaram:
+
+* A proteção da conta Root é uma das primeiras medidas de segurança que devem ser adotadas.
+* O IAM permite um controle granular de acessos dentro do ambiente AWS.
+* O EC2 oferece grande flexibilidade para provisionamento de servidores sob demanda.
+* O S3 é uma solução extremamente escalável para armazenamento de arquivos.
+* O gerenciamento de custos é tão importante quanto o gerenciamento dos recursos técnicos.
+* A computação em nuvem simplifica a implantação e manutenção de infraestruturas modernas.
+
+---
+
+## Evidências da Prática
+
+### Dashboard AWS
+
+![Dashboard AWS](images/aws-dashboard.png)
+
+### Criação da Instância EC2
+
+![Criação da Instância EC2](images/criacao-instancia-ec2.png)
+
+### Gerenciamento de Usuários e Permissões (IAM)
+
+![Gerenciamento IAM](images/gerenciamento-iam-aws.png)
+
+### Instância Ubuntu em Execução
+
+![Instância Ubuntu](images/instancia-ec2-ubuntu.png)
+
+---
+
+## Estrutura do Repositório
+
+```text
+.
+├── README.md
+└── images
+    ├── aws-dashboard.png
+    ├── criacao-instancia-ec2.png
+    ├── gerenciamento-iam-aws.png
+    └── instancia-ec2-ubuntu.png
+```
 
 ---
 
 ## Conclusão
 
-A realização deste laboratório proporcionou uma visão prática dos principais conceitos da computação em nuvem utilizando AWS.
+A realização deste laboratório permitiu aplicar na prática conceitos fundamentais da computação em nuvem utilizando a AWS.
 
-Os conhecimentos adquiridos servem como base para aprofundamento em serviços mais avançados da plataforma, contribuindo para a formação profissional em Cloud Computing e Arquitetura de Soluções.
+Os conhecimentos adquiridos servem como base para aprofundamento em Cloud Computing, Arquitetura de Soluções e Administração de Infraestrutura em Nuvem.
 
 ---
 
@@ -216,4 +304,8 @@ Os conhecimentos adquiridos servem como base para aprofundamento em serviços ma
 * AWS IAM Documentation
 * AWS S3 Documentation
 * AWS EBS Documentation
-* Bootcamp GFT - Fundamentos de Cloud com AWS
+* Bootcamp GFT - Fundamentos de Cloud com AWS (DIO)
+
+---
+
+Desenvolvido por **Diego Leonardo Barbosa Cavalcanti** durante o Bootcamp **GFT - Fundamentos de Cloud com AWS** da **DIO**.
